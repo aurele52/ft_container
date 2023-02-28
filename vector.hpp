@@ -27,15 +27,29 @@ class vector : public std::vector<T>
 
 	public:
 
-	vector( void ){}
-	vector( vector const & src ) {*this = src;}
+	explicit vector( const allocator_type& alloc = allocator_type()) : allo{}
+	explicit vector( size_type n, const value_type& val = value_type(), const allocator_type &alloc = allocator_type() ) {}
+	template <class InputIterator>
+	vector (InputIterator first, InputIterator last, const allocator_type &alloc = allocator_type()) {}
+	vector( const vector & x ) {*this = x;}
 	~vector( void ) {}
+
+	iterator end( void ) { return (this->last);}
 
 	vector & operator=( vector const & rhs )
 	{
 		(void)rhs;
 		return (*this);
 	};
+
+	protected:
+
+	allocator_type allocate;
+	pointer			start;
+	pointer			last;
+	pointer			storage_end;
+
+
 };
 
 }
