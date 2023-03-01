@@ -21,9 +21,12 @@ int	main()
 		mvector.push_back(12);
 		mvector.push_back(12);
 		mvector.push_back(12);
+		std::cout << std::endl;
+		std::cout << std::endl;
+		std::cout << std::endl;
 
-		std::vector<int>::iterator it = mvector.begin();
 		std::vector<int>::iterator ite = mvector.end();
+		std::vector<int>::iterator it = mvector.begin();
 
 		++it;
 		--it;
@@ -35,11 +38,12 @@ int	main()
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
-	std::cout << std::endl;
 	{
+
 		ft::vector<int>	mvector;
 
 		mvector.push_back(5);
+/*
 		mvector.push_back(12);
 
 		
@@ -55,9 +59,11 @@ int	main()
 		mvector.push_back(12);
 		mvector.push_back(12);
 		mvector.push_back(12);
-
-		std::vector<int>::iterator it = mvector.begin();
+		std::cout << std::endl;
+		std::cout << std::endl;
+		std::cout << std::endl;
 		std::vector<int>::iterator ite = mvector.end();
+		std::vector<int>::iterator it = mvector.begin();
 
 		++it;
 		--it;
@@ -66,5 +72,6 @@ int	main()
 			std::cout << *it << std::endl;
 			++it;
 		}
+*/
 	}
 }

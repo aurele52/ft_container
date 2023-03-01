@@ -1,7 +1,7 @@
 NAME= container
 SRC=	main.cpp
 CC= c++
-FLAG= -g -Wall -Wextra -Werror -std=c++98
+FLAG= -g -Wall -Wextra -Werror -fsanitize=address -std=c++98
 
 all:	$(NAME)
 
